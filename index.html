@@ -12,8 +12,18 @@
   <script type="text/babel">
     const container = document.querySelector('#root')
     const root = ReactDOM.createRoot(container)
+
+    const App = () => (
+      <>
+        <a id="thumbnail" href="https://youtu.be/_1zSGZTu6io?si=7n_2Imhr3MVV50hf">
+          <div id="overlays">
+            <span id="overlay-text" className="style-scope ytd-thumbnail-overlay-now-playing-renderer">Now playing</span>
+          </div>
+        </a>
+      </>
+    )
     
-    root.render()
+    root.render(<App />)
   </script>
 </body>
 </html>
