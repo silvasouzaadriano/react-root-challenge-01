@@ -73,6 +73,30 @@
         />
       </>
     ) */
+
+    /* 
+    Sixth challenge
+
+    const Message = ({ role, content}) => {
+      const srcImage = role === 'assistant' ? './assets/icon-bot.png' : './assets/icon-user.png' 
+
+
+      return (
+        <div>
+          <div>
+            <img src={srcImage} alt="Avatar do perfil" style={{ width: '40px'}}/>
+          </div>
+          <p>{content}</p>  
+        </div>
+      )
+    }
+
+    const App = () => (
+      <>
+        <Message role="assistant" content="O trabalho do programador é transformar café em código?" />
+        <Message role="human" content="Não. É gerar valor." />
+      </>
+    ) */
     
     root.render(<App />)
   </script>
