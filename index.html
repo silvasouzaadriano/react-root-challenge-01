@@ -6,6 +6,7 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <div id="root"></div>
 <body>
@@ -97,6 +98,51 @@
         <Message role="human" content="Não. É gerar valor." />
       </>
     ) */
+
+    const Avatar = () => (
+      <img src="./assets/avatar.jpg" alt="Foto do Perfil" className="avatar" />
+    )
+
+    const Intro = () => (
+      <>
+        <h1>Adriano</h1>
+        <p>
+          Sou um programador de longa data tentando melhorar a cada dia. Quando não estou programando gosto de caminhar na praia, jogar videogame, assistir séries, ir na academia e curtir minha linda esposa. Aqui estão algumas das minhas habilidades.
+        </p>
+      </>
+    )
+
+    const Skill = ({ emoji, skill, bgColor }) => {
+      const liClass = `skill ${bgColor}`
+
+      return (
+        <>
+          <li className={liClass}>{emoji} {skill}</li>
+        </>
+      )
+    }
+
+    const ListOfSkills = () => (
+      <div className="list-of-skills">
+        <Skill emoji="🤟🏻" skill="Programação" bgColor="bg-lightblue"/>
+        <Skill emoji="👍🏻" skill="Inglês" bgColor="bg-pink"/>
+        <Skill emoji="👋🏻" skill="Culinária" bgColor="bg-yellow"/>
+        <Skill emoji="👎" skill="Piadas" bgColor="bg-red"/>
+      </div>
+    )
+
+    const App = () => (
+      <>
+        <div className="card">
+          <Avatar />
+          <div className="info">
+            <Intro />
+            <ListOfSkills />
+          </div>
+
+        </div>
+      </>
+    )
     
     root.render(<App />)
   </script>
