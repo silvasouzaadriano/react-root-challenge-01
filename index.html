@@ -30,12 +30,8 @@
     /* 
     Third challenge
 
-    const App = () => (
-      <h1 style={{ color: 'lightblue' }}>Burgão do Zé</h1>
-    ) */
+    const App = () => <h1 style={{ color: 'lightblue' }}>Burgão do Zé</h1> */
 
-
-    
     /* 
     Fourth challenge
 
@@ -50,7 +46,7 @@
     Fifth challenge
 
     const Product = ({ img, name, description, price }) => (
-      <div className="product">
+      <div className="product" style={{ width: 100 }}>
         <img src={img} alt={name} />
           <h3>{name}</h3>
           <p>{description}</p>
@@ -81,7 +77,6 @@
     const Message = ({ role, content}) => {
       const srcImage = role === 'assistant' ? './assets/icon-bot.png' : './assets/icon-user.png' 
 
-
       return (
         <div>
           <div>
@@ -99,9 +94,8 @@
       </>
     ) */
 
-    const Avatar = () => (
+    const Avatar = () => 
       <img src="./assets/avatar.jpg" alt="Foto do Perfil" className="avatar" />
-    )
 
     const Intro = () => (
       <>
@@ -123,12 +117,12 @@
     }
 
     const ListOfSkills = () => (
-      <div className="list-of-skills">
+      <ul className="list-of-skills">
         <Skill emoji="🤟🏻" skill="Programação" bgColor="bg-lightblue"/>
         <Skill emoji="👍🏻" skill="Inglês" bgColor="bg-pink"/>
         <Skill emoji="👋🏻" skill="Culinária" bgColor="bg-yellow"/>
         <Skill emoji="👎" skill="Piadas" bgColor="bg-red"/>
-      </div>
+      </ul>
     )
 
     const App = () => (
